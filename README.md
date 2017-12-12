@@ -15,7 +15,7 @@
 11. Klik File ( dipjok kiri atas )
 12. Open Project
 13. Pilih ke folder project_netbeans yang sudah kita ekstrak tadi
-14. Bila sudah selesai membuka, akan ada project bernama "ProjectDataKaryawan"
+14. Bila sudah selesai membuka, akan ada project bernama "FinalProject PBO"
 15. Run Project :)
 
 Penjelasan Package :
