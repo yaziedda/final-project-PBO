@@ -5,7 +5,6 @@
  */
 package finalproject.pbo.dao.impl;
 
-import finalproject.pbo.dao.LoginDao;
 import finalproject.pbo.konfigurasi.KoneksiDatabase;
 import finalproject.pbo.model.UserModel;
 import java.sql.Connection;
@@ -19,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author Dizzay
  */
-public class LoginDaoImpl implements LoginDao {
+public class LoginDaoImpl {
     
     private final Connection koneksiDatabase;
 
@@ -27,9 +26,9 @@ public class LoginDaoImpl implements LoginDao {
         this.koneksiDatabase = KoneksiDatabase.koneksiDB();
     }
 
-    @Override
     public UserModel login(String username, String password) {
-        String query = "SELECT nama, username, latest_login FROM app_user_data WHERE username = ? and password = ?";
+        String namaTable = "app_user_data";
+        String query = "SELECT nama, username, latest_login FROM "+namaTable+" WHERE username = ? and password = ?";
         UserModel userModel = null;
         try {
             PreparedStatement preparedStatement = koneksiDatabase.prepareStatement(query);
@@ -43,13 +42,12 @@ public class LoginDaoImpl implements LoginDao {
                 userModel.setNama(hasilQuery.getString("nama"));
                 userModel.setUsername(hasilQuery.getString("username"));
                 userModel.setLatestLogin(hasilQuery.getString("latest_login"));
-            }
+            }            
             return userModel;
         } catch (SQLException ex) {
             Logger.getLogger(LoginDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
-        
     }
     
 }

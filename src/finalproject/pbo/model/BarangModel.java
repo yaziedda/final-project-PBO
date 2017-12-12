@@ -9,12 +9,13 @@ package finalproject.pbo.model;
  *
  * @author Dizzay
  */
-public class UserModel {
+public class BarangModel {
+    
     private int id;
     private String nama;
-    private String username;
-    private String role;
-    private String latestLogin;
+    private String qty;
+    private String diPinjam;
+    private String sisa;
 
     public int getId() {
         return id;
@@ -23,8 +24,6 @@ public class UserModel {
     public void setId(int id) {
         this.id = id;
     }
-    
-    
 
     public String getNama() {
         return nama;
@@ -34,31 +33,30 @@ public class UserModel {
         this.nama = nama;
     }
 
-    public String getUsername() {
-        return username;
+    public String getQty() {
+        return qty;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setQty(String qty) {
+        this.qty = qty;
     }
 
-    public String getRole() {
-        return role;
+    public String getDiPinjam() {
+        return diPinjam;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setDiPinjam(String diPinjam) {
+        this.diPinjam = diPinjam;
+    }
+
+    public String getSisa() {
+        return sisa;
+    }
+
+    public void setSisa(String sisa) {
+        this.sisa = sisa;
     }
     
-    
-
-    public String getLatestLogin() {
-        return latestLogin;
-    }
-
-    public void setLatestLogin(String latestLogin) {
-        this.latestLogin = latestLogin;
-    }
     
     
 }

@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package finalproject.pbo.dao;
-
-import finalproject.pbo.model.UserModel;
-import java.util.List;
+package finalproject.pbo.util;
 
 /**
  *
  * @author Dizzay
  */
-public interface UserDataDao {
+public class Statics {
     
-    List<UserModel> getUser();
+    public static final int FLAG_MANAGE_USER = 912;
+    public static final int FLAG_MANAGE_BARANG = 913;
+    public static final int FLAG_LAPORAN = 914;
     
 }
